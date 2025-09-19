@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from snsptravel.netlify.app/admin.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Sep 2025 18:16:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - SN.SP Travel</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-plane"></i> SN.SP Admin</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#dashboard" class="menu-link active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a></li>
+                <li><a href="#blogs" class="menu-link" data-section="blogs">
+                    <i class="fas fa-blog"></i> Blog Management
+                </a></li>
+                <li><a href="#add-blog" class="menu-link" data-section="add-blog">
+                    <i class="fas fa-plus"></i> Add New Blog
+                </a></li>
+                <li><a href="#settings" class="menu-link" data-section="settings">
+                    <i class="fas fa-cog"></i> Settings
+                </a></li>
+                <li><a class='menu-link' href='index.html'>
+                    <i class="fas fa-home"></i> Back to Website
+                </a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </nav>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1 id="page-title">Dashboard</h1>
+                <div class="header-actions">
+                    <span class="user-info">Welcome, Admin</span>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <!-- Dashboard Section -->
+                <section id="dashboard-section" class="content-section active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-blog"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-blogs">0</h3>
+                                <p>Total Blogs</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="published-blogs">0</h3>
+                                <p>Published</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-draft2digital"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="draft-blogs">0</h3>
+                                <p>Drafts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-blogs">
+                        <h3>Recent Blog Posts</h3>
+                        <div id="recent-blogs-list" class="blog-list">
+                            <!-- Recent blogs will be loaded here -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Blog Management Section -->
+                <section id="blogs-section" class="content-section">
+                    <div class="section-header">
+                        <h3>All Blog Posts</h3>
+                        <button class="btn btn-primary" onclick="showSection('add-blog')">
+                            <i class="fas fa-plus"></i> Add New Blog
+                        </button>
+                    </div>
+                    <div id="all-blogs-list" class="blog-list">
+                        <!-- All blogs will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Add Blog Section -->
+                <section id="add-blog-section" class="content-section">
+                    <div class="form-container">
+                        <h3>Add New Blog Post</h3>
+                        <form id="add-blog-form" class="blog-form">
+                            <div class="form-group">
+                                <label for="blog-title">Title *</label>
+                                <input type="text" id="blog-title" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="blog-excerpt">Excerpt *</label>
+                                <textarea id="blog-excerpt" rows="3" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="blog-category">Category</label>
+                                <select id="blog-category">
+                                    <option value="Flight Tips">Flight Tips</option>
+                                    <option value="Hotels">Hotels</option>
+                                    <option value="Visa">Visa</option>
+                                    <option value="Travel Guide">Travel Guide</option>
+                                    <option value="Study Abroad">Study Abroad</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="blog-image">Featured Image URL</label>
+                                <input type="url" id="blog-image" placeholder="../example.com/image.html">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="blog-content">Content *</label>
+                                <div class="editor-toolbar">
+                                    <button type="button" onclick="formatText('bold')"><i class="fas fa-bold"></i></button>
+                                    <button type="button" onclick="formatText('italic')"><i class="fas fa-italic"></i></button>
+                                    <button type="button" onclick="formatText('underline')"><i class="fas fa-underline"></i></button>
+                                    <button type="button" onclick="insertList()"><i class="fas fa-list-ul"></i></button>
+                                </div>
+                                <div id="blog-content" class="rich-editor" contenteditable="true" data-placeholder="Write your blog content here..."></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Status</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="blog-status" value="published" checked>
+                                        <span>Published</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="blog-status" value="draft">
+                                        <span>Draft</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset</button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Save Blog
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section> 
+                <script>
+document.getElementById('add-blog-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent page reload
+
+    const title = document.getElementById('blog-title').value;
+    const excerpt = document.getElementById('blog-excerpt').value;
+
+    // Get existing blogs from localStorage, or empty array if none
+    const blogs = JSON.parse(localStorage.getItem('blogs') || '[]');
+
+    // Add new blog
+    blogs.push({ title, excerpt, date: new Date().toLocaleString() });
+
+    // Save back to localStorage
+    localStorage.setItem('blogs', JSON.stringify(blogs));
+
+    // Clear form
+    document.getElementById('add-blog-form').reset();
+
+    alert('Blog added successfully!');
+});
+</script>
+
+
+                <!-- Settings Section -->
+                <section id="settings-section" class="content-section">
+                    <div class="settings-container">
+                        <h3>Website Settings</h3>
+                        
+                        <div class="settings-card">
+                            <h4>Contact Information</h4>
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label for="contact-phone">Phone Number</label>
+                                    <input type="tel" id="contact-phone" value="+234 703 261 5370">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Email Address</label>
+                                    <input type="email" id="contact-email" value="info@snsp.travel">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+
+                        <div class="settings-card">
+                            <h4>Data Management</h4>
+                            <div class="data-actions">
+                                <button class="btn btn-secondary" onclick="exportData()">
+                                    <i class="fas fa-download"></i> Export Data
+                                </button>
+                                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">
+                                    <i class="fas fa-upload"></i> Import Data
+                                </button>
+                                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(this)">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Edit Blog Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit Blog Post</h3>
+                <button class="modal-close" onclick="closeEditModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="edit-blog-form" class="blog-form">
+                    <input type="hidden" id="edit-blog-id">
+                    
+                    <div class="form-group">
+                        <label for="edit-blog-title">Title *</label>
+                        <input type="text" id="edit-blog-title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-blog-excerpt">Excerpt *</label>
+                        <textarea id="edit-blog-excerpt" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-blog-category">Category</label>
+                        <select id="edit-blog-category">
+                            <option value="Flight Tips">Flight Tips</option>
+                            <option value="Hotels">Hotels</option>
+                            <option value="Visa">Visa</option>
+                            <option value="Travel Guide">Travel Guide</option>
+                            <option value="Study Abroad">Study Abroad</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-blog-image">Featured Image URL</label>
+                        <input type="url" id="edit-blog-image">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-blog-content">Content *</label>
+                        <div id="edit-blog-content" class="rich-editor" contenteditable="true"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="edit-blog-status" value="published">
+                                <span>Published</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="edit-blog-status" value="draft">
+                                <span>Draft</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeEditModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Update Blog
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+
+<!-- Mirrored from snsptravel.netlify.app/admin.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Sep 2025 18:16:25 GMT -->
+</html>

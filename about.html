@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from snsptravel.netlify.app/about by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Sep 2025 18:16:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SN.SP Limited</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN.SP Limited</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-brand img.logo {
+            height: 50px;
+        }
+
+        .nav-brand .brand-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #000;
+        }
+
+        /* Menu Styles */
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Mobile Toggle */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .nav-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            border-radius: 3px;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .nav-menu {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background-color: #fff;
+                width: 200px;
+                flex-direction: column;
+                gap: 0;
+                display: none;
+                padding: 10px 0;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a class='brand-link' href='index.html'>
+                    <img src="attached_assets/Snowy-Spring-logo_1757438803888.png" alt="SN.SP Logo" class="logo">
+                </a>
+                <a class='brand-link' href='index.html'>
+                    <span class="brand-name">SN.SP Limited</span>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class='nav-link' href='services.html'>Services</a></li>
+                <li><a class='nav-link' href='about.html'>About</a></li>
+                <li><a class='nav-link' href='blog.html'>Blog</a></li>
+                <li><a class='nav-link' href='contact.html'>Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+ <!-- About Hero -->
+<section class="page-hero">
+    <div class="page-hero-background">
+        <div class="page-hero-image-slider">
+            <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="Professional Team" class="page-hero-slide active">
+            <img src="attached_assets/generated_images/Travel_agency_office_interior_1b77b9fc.png" alt="Office Interior" class="page-hero-slide">
+            <img src="attached_assets/generated_images/Travel_destination_hero_background_7c670b56.png" alt="Travel Destinations" class="page-hero-slide">
+            <img src="attached_assets/generated_images/Luxury_hotel_lobby_photo_64bda546.png" alt="Luxury Services" class="page-hero-slide">
+        </div>
+        <div class="page-hero-motion-elements">
+            <div class="floating-element plane">✈️</div>
+            <div class="floating-element cloud1">☁️</div>
+            <div class="floating-element star1">✨</div>
+            <div class="floating-element star2">✨</div>
+        </div>
+        <div class="page-hero-overlay"></div>
+    </div>
+    <div class="page-hero-content">
+        <h1>About SN.SP Limited</h1>
+        <p>Your trusted partner in creating unforgettable travel experiences since 2018</p>
+    </div>
+</section>
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.page-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.page-hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page-hero-image-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.page-hero-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.page-hero-slide.active {
+    opacity: 1;
+}
+
+/* Overlay for contrast */
+.page-hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    top: 0;
+    left: 0;
+}
+
+/* Hero Content */
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.page-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.page-hero-content p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Floating Motion Elements */
+.floating-element {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.plane {
+    top: 20%;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.cloud1 {
+    top: 10%;
+    right: 20%;
+    font-size: 3rem;
+    animation-duration: 12s;
+}
+
+.star1 {
+    bottom: 20%;
+    left: 25%;
+    font-size: 1.5rem;
+    animation-duration: 10s;
+}
+
+.star2 {
+    top: 50%;
+    right: 15%;
+    font-size: 1.2rem;
+    animation-duration: 9s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .page-hero-content p {
+        font-size: 1.1rem;
+    }
+    .floating-element {
+        font-size: 1.5rem;
+    }
+}
+</style>
+<script>
+    const slides = document.querySelectorAll('.page-hero-slide');
+let currentIndex = 0;
+
+function showNextSlide() {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+}
+
+// Change slide every 5 seconds
+setInterval(showNextSlide, 5000);
+</script>
+
+    <!-- Company Story -->
+    <section class="company-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-images">
+                    <div class="story-image-main">
+                        <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="Our Professional Team" class="team-image">
+                    </div>
+                    <div class="story-image-secondary">
+                        <img src="attached_assets/generated_images/Travel_agency_office_interior_1b77b9fc.png" alt="Our Modern Office" class="office-image">
+                    </div>
+                </div>
+                <div class="story-text">
+                    <h2>Our Story</h2>
+                    <p class="story-lead">Founded in 2018, SN.SP (Snow Spring) Limited has grown from a small travel consultancy to one of Ibadan's most trusted travel agencies.</p>
+                    
+                    <p>We began with a simple mission: to make travel accessible, affordable, and stress-free for everyone. Our founders, seasoned travel professionals with over a decade of combined experience, recognized the need for personalized travel services that truly understand the unique needs of Nigerian travelers.</p>
+                    
+                    <p>Today, we've successfully helped thousands of clients achieve their travel dreams, from business trips to family vacations, study abroad programs to visa applications. Our commitment to excellence and personalized service has made us the preferred travel partner for individuals and businesses across Nigeria.</p>
+                    
+                    <div class="company-values">
+                        <h3>Our Core Values</h3>
+                        <ul class="values-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>Integrity:</strong> We believe in honest, transparent dealings with all our clients</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Excellence:</strong> We strive for perfection in every service we provide</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Innovation:</strong> We continuously improve our services using the latest technology</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Customer-Centric:</strong> Your satisfaction is our top priority</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <style>
+        .company-story {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .story-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .story-images {
+            flex: 1 1 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .story-image-main, .story-image-secondary {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .team-image, .office-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .team-image:hover, .office-image:hover {
+            transform: scale(1.05);
+        }
+
+        .story-text {
+            flex: 1 1 400px;
+        }
+
+        .story-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .story-lead {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .story-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .company-values {
+            margin-top: 30px;
+        }
+
+        .company-values h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .values-list {
+            list-style: none;
+        }
+
+        .values-list li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .values-list i {
+            color: #28a745; /* Green check icon */
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .story-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+    <script>
+        // Optional: Add any JavaScript functionality if needed
+    </script>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide exceptional travel services that exceed our clients' expectations, making every journey memorable and hassle-free through our expertise, dedication, and personalized approach.</p>
+                </div>
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become the leading travel agency in Nigeria, recognized for our innovative solutions, exceptional customer service, and commitment to making the world more accessible to all travelers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .mission-vision {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .mv-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .mv-card {
+            background-color: #f1f1f1;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex: 1 1 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .mv-icon {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .mv-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .mv-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .mv-grid {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+  
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">Experienced professionals dedicated to your travel success</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="Team Member" class="member-photo">
+                    </div>
+                    <div class="member-info">
+                        <h4>Oluwaseun Abioye</h4>
+                        <p class="member-title">Founder & CEO</p>
+                        <p class="member-bio">With over 10 years in the travel industry, Seun leads our team with passion for creating exceptional travel experiences.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="attached_assets/generated_images/Travel_agency_office_interior_1b77b9fc.png" alt="Office Team" class="member-photo">
+                    </div>
+                    <div class="member-info">
+                        <h4>Our Professional Team</h4>
+                        <p class="member-title">Travel Consultants</p>
+                        <p class="member-bio">Our experienced consultants are trained in visa requirements, flight bookings, and destination expertise to serve you better.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .team-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .team-member {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex: 1 1 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-image {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .member-photo {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .member-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .member-info h4 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .member-title {
+            font-size: 1rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .member-bio {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose SN.SP Limited</h2>
+                <p class="section-subtitle">What sets us apart in the travel industry</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>7+ Years Experience</h3>
+                    <p>Established in 2018, we have successfully served thousands of satisfied customers with our reliable travel services.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Trusted Partners</h3>
+                    <p>We work with leading airlines, hotels, and service providers worldwide to ensure you get the best deals and services.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated customer support team is available round the clock to assist you with any travel-related queries or emergencies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Bookings</h3>
+                    <p>All transactions are processed securely, and we maintain strict confidentiality of your personal and travel information.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Competitive Pricing</h3>
+                    <p>We offer the most competitive rates in the market without compromising on service quality or reliability.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Personalized Service</h3>
+                    <p>Every client receives personalized attention and customized travel solutions tailored to their specific needs and preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .why-choose-us {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .feature-card {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex: 1 1 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #28a745; /* Green color */
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+
+    <!-- Company Stats -->
+    <section class="company-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .company-stats {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .stat-item {
+            flex: 1 1 200px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            color: #007bff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Let our experienced team help you plan your perfect trip. Contact us today for personalized travel solutions.</p>
+                <a class='btn btn-primary' href='contact.html'>Get in Touch</a>
+            </div>
+        </div>
+    </section>
+    <style>
+        .cta {
+            padding: 60px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .btn-primary {
+            background-color: #28a745; /* Green button */
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="attached_assets/Snowy-Spring-logo_1757438803888.png" alt="SN.SP Logo" class="footer-logo">
+                        <h3>SN.SP Limited</h3>
+                    </div>
+                    <p>Your trusted travel agency for visa, flight and hotel services with a highly trained and experienced team fully committed to your travel needs.</p>
+                    <div class="social-media">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://facebook.com/snspltd" target="_blank" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com/snspltd" target="_blank" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/snspltd" target="_blank" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://linkedin.com/company/snspltd" target="_blank" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/2347032615370" target="_blank" class="social-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='services.html'>Services</a></li>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href='services.html'>Flight Booking</a></li>
+                        <li><a href='services.html'>Hotel Booking</a></li>
+                        <li><a href='services.html'>Visa Application</a></li>
+                        <li><a href='services.html'>Study Abroad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Suite 15, Damin Plaza, Ring Road, Ibadan</p>
+                    <p><i class="fas fa-phone"></i> +234 703 261 5370</p>
+                    <p><i class="fas fa-phone"></i> +234 901 593 2925</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SN.SP (Snow Spring) Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+<!-- Mirrored from snsptravel.netlify.app/about by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Sep 2025 18:16:16 GMT -->
+</html>

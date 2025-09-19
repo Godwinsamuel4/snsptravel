@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from snsptravel.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Sep 2025 18:15:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN.SP (Snow Spring) Limited - Professional Travel Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="icon" href="attached_assets/Snowy-Spring-logo_1757438803888.png" type="image/png">
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <nav class="navbar">
+        <div class="container">
+            <!-- Brand Section -->
+            <div class="nav-brand">
+                <a class='brand-link' href='index.html'>
+                    <img src="attached_assets/Snowy-Spring-logo_1757438803888.png" alt="SN.SP Logo" class="logo">
+                </a>
+                <a class='brand-link' href='index.html'>
+                    <span class="brand-name">SN.SP Limited</span>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class='nav-link' href='services.html'>Services</a></li>
+                <li><a class='nav-link' href='about.html'>About</a></li>
+                <li><a class='nav-link' href='blog.html'>Blog</a></li>
+                <li><a class='nav-link' href='contact.html'>Contact</a></li>
+            </ul>
+
+
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+</header>
+ 
+<script>
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+
+
+
+
+  <!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-background">
+        <div class="hero-image-slider">
+            <div class="hero-slide active" style="background-image: url('attached_assets/generated_images/Travel_destination_hero_background_7c670b56.png');"></div>
+            <div class="hero-slide" style="background-image: url('attached_assets/generated_images/Luxury_airplane_interior_photo_d5f9d465.png');"></div>
+            <div class="hero-slide" style="background-image: url('attached_assets/generated_images/Luxury_hotel_lobby_photo_64bda546.png');"></div>
+            <div class="hero-slide" style="background-image: url('attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png');"></div>
+            <div class="hero-slide" style="background-image: url('attached_assets/generated_images/Travel_agency_office_interior_1b77b9fc.png');"></div>
+            <div class="hero-slide" style="background-image: url('attached_assets/generated_images/Study_abroad_travel_photo_062a3b5a.png');"></div>
+    </div>
+
+
+        <div class="hero-motion-elements">
+            <div class="floating-element plane">✈️</div>
+            <div class="floating-element cloud1">☁️</div>
+            <div class="floating-element cloud2">☁️</div>
+            <div class="floating-element star1">✨</div>
+            <div class="floating-element star2">✨</div>
+        </div>
+        <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+        <div class="container">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Discover Your Next <span class="highlight">Adventure</span>
+                </h1>
+                <p class="hero-subtitle" style="color:#ffff">
+                    Your Trusted Travel Partner for Unforgettable Journeys
+                </p>
+                <p class="hero-description" style="color:#ffff" style=align:center>
+                    Experience seamless travel planning with our expert team, tailored to your dream destinations.
+                </p>
+                <div class="hero-buttons">
+                    <a class='btn btn-primary' href='services.html'>Explore Services</a>
+                    <a class='btn btn-secondary' href='contact.html'>Get a Quote</a>
+                </div>
+            </div>
+
+            <!-- Book Flight Section -->
+            <div class="book-flight">
+                <h3>Book Your Flight Now</h3>
+                <form id="bookFlightForm">
+                     <input type="text" id="userName" name="userName" placeholder="Your Name" required>
+                    <input type="text" id="destination" name="destination" placeholder="Destination" required>
+                    <input type="text" id="contact" name="contact" placeholder="Contact" required>
+
+                   <a href="https://wa.me/2347032615370" target="_blank" class="btn btn-primary">
+    Book Now
+</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  /* ============================= */
+  /* Hero Background Image Slider */
+  /* ============================= */
+  const slides = document.querySelectorAll(".hero-slide");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  if (slides.length > 0) {
+    showSlide(currentSlide);
+    setInterval(nextSlide, 8000); // change slide every 8s
+  }
+
+  /* ============================= */
+  /* Book Flight Form Handling */
+  /* ============================= */
+  const bookFlightForm = document.getElementById("bookFlightForm");
+
+  if (bookFlightForm) {
+    bookFlightForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(bookFlightForm);
+      const data = Object.fromEntries(formData.entries());
+
+      // For now, just log or alert the form data
+      console.log("Flight booking data:", data);
+      alert(`Flight booked from ${data.from || "?"} to ${data.to || "?"}`);
+      
+      // Reset form if needed
+      bookFlightForm.reset();
+    });
+  }
+});
+</script>
+
+
+<!-- Who We Are Section -->
+<section id="who-we-are" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-images">
+                <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="SSG Travels Team" class="team-image">
+            </div>
+            <div class="about-text">
+                <h2 class="section-title">Who We Are</h2>
+                <p>
+                    <strong>Snowy Spring Global Travels and Tours (SSG Travels)</strong> is a privately owned travel management company headquartered in Ibadan, Nigeria. 
+                    The vision for SSG Travels was conceived in 2017 by our CEO, <strong>Oluwaseun Abioye</strong>—a seasoned travel professional with years of experience working alongside global leaders in the travel industry.
+                </p>
+                <p>
+                    Officially launched in May 2020, SSG Travels was founded with a commitment to delivering <em>quality, reliable, and customer-centered</em> travel solutions. 
+                    Our mission is to make every journey seamless, memorable, and tailored to meet the unique needs of our clients.
+                </p>
+                <div class="testimonial-author">
+                    <h4>Oluwaseun Abioye</h4>
+                    <span>CEO, SSG Travels</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+// Reveal on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    ".about-images img, .about-text, .service-card"
+  );
+
+  const revealOnScroll = () => {
+    elements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (elementTop < windowHeight - 100) {
+        el.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Trigger once on load
+});
+</script>
+
+
+
+
+
+ <!-- Services Section -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Comprehensive travel solutions tailored to your unique needs</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Flight Booking -->
+      <div class="service-card">
+        <img src="attached_assets/generated_images/jametlene-reskp-SoGfO2y9iUw-unsplash.jpg" alt="Flight Booking">
+        <div class="service-content">
+          <div class="service-icon"><i class="fas fa-plane"></i></div>
+          <h3>Flight Booking</h3>
+          <p>Seamless flight booking for your global travel needs with competitive pricing and flexible options.</p>
+        </div>
+      </div>
+
+      <!-- Hotel Booking -->
+      <div class="service-card">
+        <img src="attached_assets/generated_images/istockphoto-2159658692-612x612.jpg" alt="Hotel Booking">
+        <div class="service-content">
+          <div class="service-icon"><i class="fas fa-hotel"></i></div>
+          <h3>Hotel Booking</h3>
+          <p>Book top-rated hotels worldwide with our extensive network of trusted accommodation partners.</p>
+        </div>
+      </div>
+
+      <!-- Visa Application -->
+      <div class="service-card">
+        <img src="attached_assets/generated_images/istockphoto-2165160184-612x612.jpg" alt="Visa Application">
+        <div class="service-content">
+          <div class="service-icon"><i class="fas fa-passport"></i></div>
+          <h3>Visa Application</h3>
+          <p>Expert visa application assistance for stress-free travel with high success rates.</p>
+        </div>
+      </div>
+
+      <!-- Holiday Packages -->
+      <div class="service-card">
+        <img src="attached_assets/generated_images/istockphoto-1163623266-612x612.jpg" alt="Holiday Packages">
+        <div class="service-content">
+          <div class="service-icon"><i class="fas fa-umbrella-beach"></i></div>
+          <h3>Holiday Packages</h3>
+          <p>Customized holiday packages for unforgettable travel experiences tailored to your preferences.</p>
+        </div>
+      </div>
+
+      <!-- Study Abroad -->
+      <div class="service-card">
+        <img src="attached_assets/generated_images/istockphoto-2165160184-612x612.jpg" alt="Study Abroad">
+        <div class="service-content">
+          <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Study Abroad</h3>
+          <p>Transform your future with global educational experiences and comprehensive support.</p>
+        </div>
+      </div>
+
+      <!-- Travel Advisories -->
+      <div class="service-card">
+        <img src="attached_assets/generated_images/jenna-day-UM8bURrginM-unsplash.jpg" alt="Travel Advisories">
+        <div class="service-content">
+          <div class="service-icon"><i class="fas fa-info-circle"></i></div>
+          <h3>Travel Advisories</h3>
+          <p>Get the latest updates on travel advisories and safety information for informed decisions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+            </div>
+        </div>
+    </section>
+    <script> 
+    // Scroll animation for service cards
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".service-card");
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < triggerBottom) {
+        card.classList.add("show");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+});
+
+    </script>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-images">
+                    <div class="about-image-main">
+                        <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="Professional SN.SP Team" class="team-image">
+                    </div> 
+                     <div class="about-image-main">
+                        <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="Professional SN.SP Team" class="team-image">
+                    </div>
+                    <div class="about-image-main">
+                        <img src="attached_assets/generated_images/Travel_agency_office_interior_1b77b9fc.png" alt="SN.SP Office Interior" class="office-image">
+                    </div> 
+                    <div class="about-image-main">
+                        <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="Professional SN.SP Team" class="team-image">
+                    </div>
+                    <div class="about-image-main">
+                        <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="Professional SN.SP Team" class="team-image">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">Why Choose SN.SP Limited</h2>
+                    <p class="about-description">We Are The Best Travel Agency in Ibadan</p>
+                    <p>Our highly trained and experienced team is fully committed to meeting your travel needs. From pre-sales to post-service, we ensure your perfect travel experience through our partners and vendors.</p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Experienced Team</h4>
+                                <p>Seasoned travel professionals dedicated to crafting perfect travel experiences.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Customized Solutions</h4>
+                                <p>Personalized travel arrangements tailored to your specific needs and preferences.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Exceptional Service</h4>
+                                <p>Customer satisfaction is our top priority with 24/7 support and expert guidance.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Competitive Pricing</h4>
+                                <p>Excellent value for money with competitive pricing without compromising quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <script>
+// Reveal on scroll for about section
+// Scroll animation for features & images
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    ".about-image-main, .feature-item, .section-title, .about-description"
+  );
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    elements.forEach(el => {
+      const boxTop = el.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        el.classList.add("show");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // trigger on load
+});
+    </script>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Trusted by hundreds of satisfied travelers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"SN.SP exceeded my expectations! Their team was incredibly professional and took care of every detail. My family vacation was unforgettable, and I couldn't be happier with their service."</p>
+                        <div class="testimonial-author">
+                            <h4>Temitayo Awosanys</h4>
+                            <span>GleadsMedia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I had a fantastic experience with SN.SP. They provided excellent customer service and found me the best deals for my business trip. Their attention to detail made all the difference."</p>
+                        <div class="testimonial-author">
+                            <h4>Mr Seun</h4>
+                            <span>Business Traveler</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I referred a friend to SN.SP, they handled his documentation perfectly and my friend got his UK visitors visa. A genuine brand that knows visa requirements so well."</p>
+                        <div class="testimonial-author">
+                            <h4>Mr Alonge</h4>
+                            <span>Satisfied Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Simple responsive testimonial slider
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector(".testimonials-grid");
+  const cards = document.querySelectorAll(".testimonial-card");
+  let index = 0;
+
+  function showTestimonial(i) {
+    grid.style.transform = `translateX(-${i * 100}%)`;
+  }
+
+  // Only enable slider if screen is small
+  if (window.innerWidth < 768) {
+    grid.style.display = "flex";
+    grid.style.transition = "transform 0.5s ease-in-out";
+
+    setInterval(() => {
+      index = (index + 1) % cards.length;
+      showTestimonial(index);
+    }, 4000); // Auto-slide every 4s
+  }
+});
+    </script>
+
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Trusted Partners</h2>
+                <p class="section-subtitle">Working with leading airlines, hotels, and travel organizations worldwide</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <img src="attached_assets/generated_images/Luxury_airplane_interior_photo_d5f9d465.png" alt="Emirates Airlines" class="partner-logo">
+                    <div class="partner-name">Emirates Airlines</div>
+                    <div class="partner-type">Premium Airline Partner</div>
+                </div>
+                <div class="partner-item">
+                    <img src="attached_assets/generated_images/Luxury_hotel_lobby_photo_64bda546.png" alt="Marriott Hotels" class="partner-logo">
+                    <div class="partner-name">Marriott Hotels</div>
+                    <div class="partner-type">Luxury Hotel Chain</div>
+                </div>
+                <div class="partner-item">
+                    <img src="attached_assets/generated_images/Travel_destination_hero_background_7c670b56.png" alt="Turkish Airlines" class="partner-logo">
+                    <div class="partner-name">Turkish Airlines</div>
+                    <div class="partner-type">International Airline</div>
+                </div>
+                <div class="partner-item">
+                    <img src="attached_assets/generated_images/Professional_travel_team_photo_c5f1c607.png" alt="Travel Insurance Co" class="partner-logo">
+                    <div class="partner-name">Global Travel Insurance</div>
+                    <div class="partner-type">Insurance Partner</div>
+                </div>
+                <div class="partner-item">
+                    <img src="attached_assets/generated_images/Travel_agency_office_interior_1b77b9fc.png" alt="Booking.com" class="partner-logo">
+                    <div class="partner-name">Booking.com</div>
+                    <div class="partner-type">Hotel Booking Platform</div>
+                </div>
+                <div class="partner-item">
+                    <img src="attached_assets/generated_images/Study_abroad_travel_photo_062a3b5a.png" alt="Visa Services" class="partner-logo">
+                    <div class="partner-name">VFS Global</div>
+                    <div class="partner-type">Visa Application Center</div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector(".partners-grid");
+  const items = document.querySelectorAll(".partner-item");
+  let index = 0;
+
+  function slidePartners() {
+    index++;
+    if (index * items[0].offsetWidth >= grid.scrollWidth / 2) {
+      index = 0;
+    }
+    grid.style.transform = `translateX(-${index * (items[0].offsetWidth + 20)}px)`;
+  }
+
+  // Clone items to create an infinite loop effect
+  grid.innerHTML += grid.innerHTML;
+
+  // Slide every 10 seconds
+  setInterval(slidePartners, 500);
+});
+
+    </script>
+        
+
+    
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Plan Your Dream Trip Today!</h2>
+      <p>
+        Ready to embark on your next adventure? Contact SN.SP now to start planning your perfect getaway. 
+        Our dedicated team is here to provide personalized travel solutions at unbeatable prices.
+      </p>
+      <a href="#contact" class="btn btn-primary">Get Started</a>
+    </div>
+  </div> 
+</section>
+  <script> 
+  const track = document.querySelector(".partners-track");
+const cards = document.querySelectorAll(".partner-card");
+
+let index = 0;
+const cardWidth = cards[0].offsetWidth + 30; // card + margin
+const totalCards = cards.length;
+
+function slidePartners() {
+  index++;
+  if (index >= totalCards) {
+    index = 0;
+  }
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+// Slide every 10 seconds
+setInterval(slidePartners, 10000);
+    </script>
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Let's Get in Touch</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Nigeria Office</h4>
+                            <p>Suite 15, Damin Plaza, Ring Road, Ibadan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Monday – Friday, 9:00 am – 5:00 pm</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone Numbers</h4>
+                            <p>+234 703 261 5370<br>+234 901 593 2925</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select Service</option>
+                                <option value="flight">Flight Booking</option>
+                                <option value="hotel">Hotel Booking</option>
+                                <option value="visa">Visa Application</option>
+                                <option value="holiday">Holiday Package</option>
+                                <option value="study">Study Abroad</option>
+                                <option value="advisory">Travel Advisory</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your travel needs..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="attached_assets/Snowy-Spring-logo_1757438803888.png" alt="SN.SP Logo" class="footer-logo">
+                        <h3>SN.SP Limited</h3>
+                    </div>
+                    <p>Your trusted travel agency for visa, flight and hotel services with a highly trained and experienced team fully committed to your travel needs.</p>
+                    <div class="social-media">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://facebook.com/snspltd" target="_blank" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com/snspltd" target="_blank" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/snspltd" target="_blank" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://linkedin.com/company/snspltd" target="_blank" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/2347032615370" target="_blank" class="social-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Flight Booking</a></li>
+                        <li><a href="#services">Hotel Booking</a></li>
+                        <li><a href="#services">Visa Application</a></li>
+                        <li><a href="#services">Study Abroad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Suite 15, Damin Plaza, Ring Road, Ibadan</p>
+                    <p><i class="fas fa-phone"></i> +234 703 261 5370</p>
+                    <p><i class="fas fa-phone"></i> +234 901 593 2925</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SN.SP (Snow Spring) Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+        <script>
+            // Contact form submission handling
+            // Back to Top Button
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.style.display = "flex";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+});
+
+backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+        </script>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+<!-- Mirrored from snsptravel.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Sep 2025 18:16:13 GMT -->
+</html> 
